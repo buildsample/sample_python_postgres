@@ -17,6 +17,9 @@ before_script:
   - mkdir -p shippable/testresults
   - mkdir -p shippable/codecoverage
   - echo $key1 and $key2 and $FOO
+  - psql --version
+
+
 
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
