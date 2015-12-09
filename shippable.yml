@@ -21,7 +21,7 @@ before_script:
   - psql --version
 
 services:
-#- mysql
+  - mysql
   - postgres
 
 script:
