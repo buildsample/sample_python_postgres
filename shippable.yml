@@ -21,9 +21,9 @@ before_script:
   - psql --version
   - psql -U postgres -c "show SERVER_VERSION"
 
-#services:
+services:
   #- mysql
- # - postgres
+  - postgres
 
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
