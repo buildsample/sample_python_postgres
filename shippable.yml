@@ -19,6 +19,7 @@ before_script:
   - mkdir -p shippable/codecoverage
   - echo $key1 and $key2 and $FOO
   - psql --version
+  - psql -U postgres -c "show SERVER_VERSION"
 
 services:
   #- mysql
