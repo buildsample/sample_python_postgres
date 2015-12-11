@@ -23,8 +23,7 @@ before_script:
 
 services:
   #- mysql
-  - postgresql
-
+  - postgres
 script:
   - nosetests test.py --with-xunit --xunit-file=shippable/testresults/nosetests.xml
   - which python && coverage run --branch test.py
