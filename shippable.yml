@@ -3,10 +3,15 @@ build_image: drydock/u12pytpls:tip
 python:
    - 2.7
    - 2.6
+   - 3.2
+   - 3.3
+   - pypy
   
 install:
   - pip install -r requirements.txt
-  
+before_install:
+# - source ~/.rvm/scripts/rvm && rvm use 1.9.
+    - if [[ $SHIPPABLE_PYTHON_VERSION == '3.2' ]]; then pip install coverage==3.7.1 codecov ; fi
   
 #addons:
  # postgresql: "9.2"
